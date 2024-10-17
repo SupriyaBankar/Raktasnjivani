@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>Rakta Sanjivani</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body class="">
+    <!-- Navbar -->
+    <nav class="p-3 flex bg-white justify-between items-center fixed top-0 left-0 right-0 z-20 shadow-md">
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <img class="object-cover max-w-12 max-h-12" src="/assets/logo.jpg" alt="Logo">
+            <span class="text-lg font-medium font-display">Rakta Sanjivani</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="#" class="font-medium hover:text-primary">Home</a>
+            <a href="#" class="font-medium hover:text-primary">Find Blood</a>
+            <a href="#" class="font-medium hover:text-primary">Donate Blood</a>
+            <a href="bb_signup.html" class="font-medium hover:text-primary">Sign Up </a>
+            <a href="future_signup.html" class="font-medium hover:text-primary"> future Sign Up </a>
+            <a href="#" class="font-medium hover:text-primary">Help</a>
+        </div>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+
+        <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-w-12 max-h-12" src="/assets/logo.jpg" alt="Logo">
+                    <span class="text-lg font-medium font-display">Rakta Sanjivani</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Home</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Find Blood</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Donate Blood</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Sign Up</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50  rounded-lg hidden">Donar login</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50  rounded-lg hidden">bank login</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Help</a>
+            </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="main-img mt-12 min-h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center  lg:px-10">
+        <div class="text-white text-center flex flex-col gap-8 items-center px-8 lg:w-3/4">
+            <div class="text-xl font-bold lg:text-2xl">Welcome to Rakta Sanjivani</div>
+            <div class="text-4xl font-bold  lg:text-6xl ">Provide blood,<br> Create hope, Save life</div>
+            <button class="bg-red-600 px-10 py-3 w-fit rounded-lg lg:py-5 lg:px-12 text-2xl">Read More</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

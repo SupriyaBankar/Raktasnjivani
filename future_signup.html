@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="p-3 flex bg-white justify-between items-center fixed top-0 left-0 right-0 z-20 shadow-md">
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <img class="object-cover max-w-12 max-h-12" src="/assets/logo.jpg" alt="Logo">
+            <span class="text-lg font-medium font-display">Rakta Sanjivani</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="#" class="font-medium hover:text-primary">Home</a>
+            <a href="#" class="font-medium hover:text-primary">Find Blood</a>
+            <a href="#" class="font-medium hover:text-primary">Donate Blood</a>
+            <a href="bb_signup.html" class="font-medium hover:text-primary">Sign Up </a>
+            <a href="future_signup.html" class="font-medium hover:text-primary"> future Sign Up </a>
+            <a href="#" class="font-medium hover:text-primary">Help</a>
+        </div>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+
+        <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-w-12 max-h-12" src="/assets/logo.jpg" alt="Logo">
+                    <span class="text-lg font-medium font-display">Rakta Sanjivani</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Home</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Find Blood</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Donate Blood</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Sign Up</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50  rounded-lg hidden">Donar login</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50  rounded-lg hidden">bank login</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Help</a>
+            </div>
+    </nav>
+
+    <div class="bg-blue-50 min-h-screen flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-[70%] max-w-[70%] ">
+            <h2 class="text-2xl font-semibold mb-4 text-center">Registration</h2>
+            <form action="#" class="space-y-4">
+                <h3 class="text-xl font-semibold mb-4">Blood Bank Details</h3>
+                <div class="grid grid-cols-2 gap-8">
+                    <!-- Blood Bank Details Section -->
+
+                    <div>
+                        <label for="Name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="Name" placeholder="Name"
+                            class="mt-1 block w-[70%]  border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="Parent Hospital Name" class="block text-sm font-medium text-gray-700">Parent
+                            Hospital Name</label>
+                        <input type="text" id="Parent Hospital Name" placeholder="Enter Parent Hospital Name"
+                            class="mt-1 block w-[70%]  border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="Short Name" class="block text-sm font-medium text-gray-700">Short Name</label>
+                        <input type="text" id="Short Name" placeholder="Enter Short name"
+                            class="mt-1 block w-[70%]  border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="Contact Preson" class="block text-sm font-medium text-gray-700">Contact
+                            Preson</label>
+                        <input type="text" id="Contact Preson" placeholder="Enter Name"
+                            class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <!-- <div>
+                    <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                    <input type="date" id="dob" class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                </div> -->
+                    <div>
+                        <label for="mobile" class="block text-sm font-medium text-gray-700">Helpline No.</label>
+                        <input type="text" id="mobile" placeholder="Enter Number"
+                            class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <!-- <div>
+                    <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                    <input type="text" id="gender" placeholder="Male" class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                </div> -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" placeholder="codinglab@gmail.com"
+                            class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="Licence No." class="block text-sm font-medium text-gray-700">Contact No.</label>
+                        <input type="text" id="Licence No." placeholder="Enter Number"
+                            class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="Licence No." class="block text-sm font-medium text-gray-700">Licence No.</label>
+                        <input type="text" id="Licence No." placeholder="Enter Number"
+                            class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="Licence No." class="block text-sm font-medium text-gray-700">From Date</label>
+                        <input type="date" id="Licence No."
+                            class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="Licence No." class="block text-sm font-medium text-gray-700">To Date</label>
+                        <input type="date" id="Licence No."
+                            class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold mt-6 mb-4">Identity Details</h3>
+                <div class="grid grid-cols-2 gap-4">
+
+                    <!-- Component Facility Section -->
+                    <div>
+                        <label for="idType" class="block text-sm font-medium text-gray-700">ID Type</label>
+                        <input type="text" id="idType" placeholder="Passport"
+                            class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div class="mt-3">
+                        <label for="licence No." class="block text-base mb-2">Licence No.</label>
+                        <input type="alphanumeric" id="licence No."
+                            class="border w-[70%] text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+                            placeholder="Enter Licence No." />
+                    </div>
+                    <!-- <div>
+                    <label for="issuedState" class="block text-sm font-medium text-gray-700">Issued State</label>
+                    <input type="text" id="issuedState" placeholder="Surkhet" class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                </div> -->
+                    <div class="mt-3">
+                        <label for="licence No." class="block text-base mb-2">From Date</label>
+                        <input type="date" id="licence No."
+                            class="border w-[70%] text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+                            placeholder="Enter Licence No." />
+                    </div>
+                    <!-- <div>
+                    <label for="issueAuthority" class="block text-sm font-medium text-gray-700">Issue Authority</label>
+                    <input type="text" id="issueAuthority" placeholder="Administrative Department" class="mt-1 block w-[70%] border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500">
+                </div> -->
+                    <div class="mt-3">
+                        <label for="licence No." class="block text-base mb-2">To Date</label>
+                        <input type="date" id="licence No."
+                            class="border w-[70%] text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+                            placeholder="Enter Licence No." />
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex justify-between mt-6">
+                    <button type="button"
+                        class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none">Back</button>
+                    <button type="submit"
+                        class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>
